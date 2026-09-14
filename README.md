@@ -7,6 +7,14 @@ OS/2 Sound Driver Copyright (C) 1998 Martin Amodeo</p>
 
 ---
 
+SEAL can play module files in MOD, MTM, S3M, and XM formats. It can also play digital
+PCM audio in WAV format.
+
+It supports Sound Blaster (sb, sbpro, sb16, awe32), Gravis Ultrasound (gus and gus max),
+Pro Audio Spectrum, Ensoniq Soundscape, and Windows Sound System.
+
+---
+
 This version now builds on DOS with Open Watcom 1.9. Other targets have not been updated.
 
 ---
