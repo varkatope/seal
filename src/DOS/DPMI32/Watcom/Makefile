@@ -1,5 +1,10 @@
 # Makefile for WATCOM C/C++32 10.0 (DOS4GW protected mode, flat memory model)
 
+.EXTENSIONS:
+.EXTENSIONS:.exe 
+.EXTENSIONS:.obj 
+.EXTENSIONS:.c .asm .h
+
 CC = wcc386
 LD = wlink
 AR = wlib -s -t -q -n
@@ -30,8 +35,6 @@ $(LIB) : $(OBJS)
 	$(AR) $(LIB) @audiowcf.lnk
 	@del audiowcf.lnk
 
-#.SUFFIXES: .c .asm .obj
-
 .c.obj :
 	$(CC) $(CFLAGS) $<
 
@@ -39,4 +42,4 @@ $(LIB) : $(OBJS)
 	$(AS) $(AFLAGS) $<
 
 clean : .SYMBOLIC
-	@if exist *.obj del *.obj > nul
+	@del *.obj
